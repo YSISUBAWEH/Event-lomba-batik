@@ -25,7 +25,7 @@ html, body, section
 }
 
 #home{
-  background-image: url("./img/pattern.svg");
+  background: orange;
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -35,14 +35,13 @@ html, body, section
 
 
 .wrapper{
-    width: 870px;
+    width: 970px;
     margin: 0 auto;
     background-color: rgba(255, 68, 0, 0);
     border-radius: 8px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 40%;
+  left: 50%;
+  transform: translate(-50%, -30%);
 }
 .wrapper .judul{
     text-align: center;
@@ -93,11 +92,12 @@ html, body, section
 }
 
 .Ellipse1{
-    width: 377px; height: 378px; background: orangered; border-radius: 0 150px;border: 1.6px solid #000;
+    width: 377px; height: 378px; background: #FFB001; border-radius: 0 150px;border: 1.6px solid #000;
+    animation: slide-in 1s forwards, fade-in 1s 1s forwards;
   }
   .Ellipse2{
     width: 377px; height: 368px; background: #FFB800; border-radius: 0 150px;
-    text-align: center;padding: 3rem 2rem;margin-top: -10px; margin-left: 10px;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.30);border: 1.6px solid #000;
+    text-align: center;padding: 3rem 2rem;margin-top: -14px; margin-left: 18px;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.30);border: 1.6px solid #000;
   }
   .wrapperAbout .Ellipse2 .Tentanglomba{
     text-align: center; color: black; font-size: 14px; font-family: Poppins; font-weight: 600; word-wrap: break-word;
@@ -111,6 +111,25 @@ html, body, section
   width: 480px;
   position: relative;
   margin: 2rem 1rem;
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Hide the images by default */
@@ -303,12 +322,12 @@ html, body, section
   }
   .wrapperD .b-syarat,.b-daftar{
     width: 50%;
-    background-color: rgb(230, 255, 9);
-    margin: 0 24x;
+    margin: 0 24px;
     padding: 0.5rem;
     font-size: 18px;
     border-radius: 8px;
     align-items: center;
+    border: 1px solid #fff;
   }
   .wrapperD #syarat{
    color: #000000;
